@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+*{
+ margin: 0; 
+ padding: 0;
+
+}
+
+body{
+    background-color: rgba (233, 230, 230, 0.4);
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+}
+
+/* Header */
+header{
+    position: relative;
+    height: auto;
+    /* padding: TB RL */
+    padding: 10px 0;
+}
+
+footer {
+    position: relative;
+    background-color: blue;
+    box-sizing: border-box;
+    margin-left: auto;
+    text-align: center;
+    padding: 70px;
+    color: red; 
+    
+
+}
+
+#topo-site-menu{
+    border-bottom: 2px solid #111;
+    width: 100vw;
+}
+#topo-site-menu:after {
+    display: block;
+    clear: both;
+    content: "";
+
+}
+
+
+
+/* deve usar "#" para chamar o id */
+
+    #logo {
+        /* Deve dizer q é um bloco se quiser que ele seja escrito como bloco */
+        display: block;
+        height: 80px;
+        line-height: 80px;
+        width: 50%;
+        float: left;
+    }
+
+    #logo:after{
+        display: block ;
+        clear: both;
+        content: "";
+    }
+
+    .logo-topo{
+
+        display: block;
+        float: left;
+        width: 50px;
+        margin: 20px;
+       
+    }
+
+    /*Menu*/
+#menu-horizontal {
+    display: block;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    width: 40%;
+}
+
+#menu-horizontal ul li {
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    align-items: center;
+    list-style: none;
+}
+
+#menu-horizontal ul li a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    color: rgb(218, 15, 15);
+}
+
+#menu-horizontal ul li a:hover {
+    background-color: rgb(218, 15, 15);
+    color: #fff;
+    font-size: 24px;
+    transition: all .5s;
+
+
+}
+
+
+/* Topo Destaque */
+#topo-destaque {
+   padding-top: 5em;
+   padding-bottom: 5em;
+   text-align: center;
+   background-color: purple;
+   color: red;
+   background: url('./_img/spider.jpg');
+   background-position: 50% 40%;
+}
+
+#art-destaque {
+   padding: 2em;
+   display: block;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, .4);
+   }
+
+#art-destaque p {
+    font-size: 30px;
+    color: #000;
+
+}
+
+#art-destaque .texto-destaque {
+    color: white;
+    font-size: 33px;
+    text-shadow: 1px, 3px, #fff;
+}
+
+/* Main */
+main {
+    min-height: 40vh;
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+@charset "UTF8";
+
+
+#quadrado1 {
+    
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    position: absolute;
+    left: 100px;
+    background-color: red;
+}
+
+#bt-rt {
+    background-color: blue;
+    width: 600px;
+    height: 550.31px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+
+#quadrado1:hover {
+    background-color: red;
+    
+
+
+}
+
+#quadrado1:hover ~ .quadrado {
+    display: block;
+}
+
+.quadrado1 {
+    /* display: */
+    position: absolute;
+    background-color: #ccc;
+    height: 30px;
+    width: 30px;
+    box-shadow: 1px 1px 1px  #000;
+}
