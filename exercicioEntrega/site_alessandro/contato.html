@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title> Web Api </title>
+
+    <!-- Stylos css / EXTERNO/LOCAL -->
+    <link rel="stylesheet" href="./_css/index.css">
+
+</head>
+<body>
+
+    <!-- CLASSE PRINCIPAL DO SITE / CORPO -->
+    <main>
+
+        <!-- CABEÇALHO -->
+        <header>
+
+          <div id="logo">
+
+          </div>
+
+          <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="./index.html">Home</a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="./contato.html">Contato <span class="sr-only">(current)</span></a></li>
+                    <!-- <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li> -->
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="escreva aqui...">
+                    </div>
+                    <button type="submit" class="btn btn-default">pesquisar</button>
+                  </form>
+                  <!-- <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul> -->
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+
+
+          <div id="banner_1">
+              <!-- INÍCIO CAROUSEL 1 ABAIXO -->
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+
+                  <!-- slides carousel -->
+                  <div class="carousel-inner">
+                      <div class="item active">
+                          <img src="./_img/primeiro.png" alt="Banner1">
+                      </div>
+
+                      <div class="item">
+                          <img src="./_img/segundo.png" alt="Banner2">
+                      </div>
+
+                  </div>
+
+                  <!-- CONTROLES CAROUSEL -->
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Próximo</span>
+                  </a>
+              </div>
+              <!-- FIM CAROUSEL ACIMA 1 -->
+          </div>
+          
+
+      </header>
+
+        <!-- CORPO -->
+
+        <div id="corpoPagina">
+            
+
+          <fieldset>
+            <legend>Formulário de Contato</legend>
+            <form onsubmit="return false;" >
+                <div class="form-group row">
+                    <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nome">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="contato" class="col-sm-2 col-form-label">Contato</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="contato">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="cep" class="col-sm-2 col-form-label">CEP</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="cep">
+                    </div>
+                </div>
+
+                <!-- Endereco - API -->
+                <div id="retornoCEP">
+                    <div class="form-group row">
+                        <label for="rua" class="col-sm-2 col-form-label">Rua</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="rua">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="numero" class="col-sm-2 col-form-label">Número</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="numero">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bairro" class="col-sm-2 col-form-label">Bairro</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="bairro">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="cidade" class="col-sm-2 col-form-label">Cidade/UF</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="uf" placeholder="UF">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+        <footer>
+          <h4>Todos os direitos reservados - Site criado por Alessandro</h4>
+      </footer>
+
+    </main>
+
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="./_js/index.js"></script>
+</body>
+</html>
